@@ -14,5 +14,12 @@ const textButton = function(eventData){
 const textChanger = function(){
     let getText = document.getElementById('text-change')
     let heading = document.querySelector("h1")
-    heading.innerText = getText.value
+    let title = document.querySelector("title")
+   
+    if(getText.value){
+        heading.innerText = getText.value
+        title.innerText = getText.value
+    } else{
+        alert("!!! The text box is empty !!!")
+    }
 }
