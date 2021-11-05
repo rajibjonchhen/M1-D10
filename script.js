@@ -23,3 +23,20 @@ const textChanger = function(){
         alert("!!! The text box is empty !!!")
     }
 }
+
+const  enrollButton = function(eventData){
+    let enrollButton = document.getElementById('enroll-button')
+    
+    enrollButton.addEventListener = ('onclick', enrollStudent(3))
+}
+
+ 
+const enrollStudent = function(n){
+    let getStudentInfo = document.getElementsByTagName('tr')
+
+    let enroll = document.querySelector('.enrolled-student ul')
+
+    let addStudent =  document.createElement("li")
+    addStudent.innerText =  `${getStudentInfo[n].textContent}` 
+    enroll.appendChild(addStudent)
+}
